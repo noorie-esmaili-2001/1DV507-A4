@@ -1,7 +1,5 @@
 package se.lnu.Exercise6;
 
-import java.util.ArrayList;
-
 public class TimeMeasuring {
 
     public static void main(String[] args) {
