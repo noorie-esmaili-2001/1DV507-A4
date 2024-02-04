@@ -172,5 +172,8 @@ public class SortTimeMain {
 			results[i] = results[i] / numRuns;
 		}
 
+		for (double res: results) {
+			System.out.println(res);
+		}
 	}
 }
