@@ -36,11 +36,7 @@ public class BinaryIntHeap {
     }
 
     public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        }
-
-        return false;
+        return size == 0;
     }
 
     private void check(int index) {
@@ -58,9 +54,7 @@ public class BinaryIntHeap {
 
     private void resize() {
         int[] newArray = new int[heap.length * 2];
-        for (int i = 0; i < heap.length; i++) {
-            newArray[i] = heap[i];
-        }
+        System.arraycopy(heap, 0, newArray, 0, heap.length);
         heap = newArray;
     }
 
@@ -95,13 +89,11 @@ public class BinaryIntHeap {
     }
 
     public String toString() {
-        String str = "";
+        StringBuilder str = new StringBuilder();
         for (int i = 1; i <= size; i++) {
-            str = str + heap[i] + ",";
+            str.append(heap[i]).append(",");
         }
 
-        return str;
+        return str.toString();
     }
-
-
 }
